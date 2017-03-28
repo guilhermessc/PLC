@@ -34,17 +34,15 @@ sumList :: [Int] -> Int
 sumList [] = 0;
 sumList (x:xs) = x + sumList xs
 
--- Banco de Dados
-type Pessoa = String
-type Livro = String
-type Banco = [(Pessoa, Livro)]
+-- Função decrescente
+func :: Int -> Int 
+func n = -n
 
--- banco de dados em si
-exemplo :: Banco
-exemplo = [("carlos", "circuitos"), ("carlos", "shell script"), ("guilherme", "A arte de ser homossexual"),("brayner", "como invadir um pc")]
+-- Função que recebe parâmetro de uma função e verifica se ela é crescente
+isCrescent :: (Int -> Int) -> Int -> Bool
+isCrescent f 0 = True
+isCrescent f n | ((f n) >= (f (n-1))) = True && isCrescent f (n-1)
+               | otherwise = False 
 
--- Consulta os livros de cada pessoa no banco de dados
-livros :: Banco -> Pessoa -> [Livro]
-livros [] _ = []
-livros ((p,l):xs) people | (p == people) = [l]++livros xs people
-                         | otherwise = livros xs people   
+
+
