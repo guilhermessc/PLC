@@ -48,7 +48,9 @@ sqr_list a = map sqre a
          where sqre x = x*x
 
 sqr_sum :: [Int] -> Int
-sqr_sum a = foldr1 (+) (sqr_list a)
+-- sqr_sum a = foldr1 (+) (sqr_list a)
+-- sqr_sum a = foldr1 (\x -> \y -> x*x + y*y) a -- errado
+sqr_sum a = foldr1 (\x -> \y -> x + y) (sqr_list a) 
 
 -- bz :: Int -> Bool
 -- bz a = a > 0
