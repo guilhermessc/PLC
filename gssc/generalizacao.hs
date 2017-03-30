@@ -33,10 +33,24 @@ is_cresc f a = ((f a) >= (f (a-1))) && (is_cresc f (a-1))
 test_func :: Int -> Int
 test_func x = -x
 
-mapping :: (u -> t) -> [u] -> [t]
--- mapping f [] = []
--- mapping f (a:as) = [f a] ++ (mapping f as)
-mapping f a = [ f x | x <- a]
+-- mapping :: (u -> t) -> [u] -> [t]
+-- -- mapping f [] = []
+-- -- mapping f (a:as) = [f a] ++ (mapping f as)
+-- mapping f a = [ f x | x <- a]
 
 example :: Int
 example = foldr1 (+) [1..10]
+
+-- -----------------------------------------------------------------------------------------
+
+sqr_list :: [Int] -> [Int]
+sqr_list a = map sq a
+
+sqr_sum :: [Int] -> Int
+sqr_sum a = foldr1 (+) (sqr_list a)
+
+bz :: Int -> Bool
+bz a = a > 0
+
+filter_bz :: [Int] -> [Int]
+filter_bz a = filter bz a
