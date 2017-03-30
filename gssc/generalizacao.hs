@@ -44,13 +44,14 @@ example = foldr1 (+) [1..10]
 -- -----------------------------------------------------------------------------------------
 
 sqr_list :: [Int] -> [Int]
-sqr_list a = map sq a
+sqr_list a = map sqre a
+         where sqre x = x*x
 
 sqr_sum :: [Int] -> Int
 sqr_sum a = foldr1 (+) (sqr_list a)
 
-bz :: Int -> Bool
-bz a = a > 0
+-- bz :: Int -> Bool
+-- bz a = a > 0
 
 filter_bz :: [Int] -> [Int]
-filter_bz a = filter bz a
+filter_bz a = filter (\bz -> bz > 0) a
