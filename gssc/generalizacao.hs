@@ -57,3 +57,9 @@ sqr_sum a = foldr1 (\x -> \y -> x + y) (sqr_list a)
 
 filter_bz :: [Int] -> [Int]
 filter_bz a = filter (\bz -> bz > 0) a
+
+-- composição de funções (.)
+composicao_exemplo :: Int
+composicao_exemplo = (soma1 . soma1) 2
+                   where soma1 x = x + 1
+
