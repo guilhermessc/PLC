@@ -32,3 +32,8 @@ data Shape = Circle Float | Rectangle Float Float | Monster
 isRound :: Shape -> Bool
 isRound (Circle _) = True
 isRound _ = False
+
+area :: Shape -> Float
+area (Circle r) = pi * r^2
+area (Rectangle a b) = a*b
+area Monster = error "It's over 9000"
