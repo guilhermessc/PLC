@@ -37,4 +37,4 @@ mul2 x = 2*x
 
 mapTree :: (t->u) -> Tree t -> Tree u
 mapTree f NilT = NilT
-mapTree f (Node n l r) = Node (f n) (mapTree l) (mapTree r) 
+mapTree f (Node n l r) = (Node (f n) (mapTree f l) (mapTree f r))
