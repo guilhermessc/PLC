@@ -30,4 +30,5 @@ instance Num Complex where
       fromInteger a = (Im (fromInteger a) 0)
 
 instance Eq Complex where
-	  (==) (Im a b) (Im x y)
+	  (==) (Im a b) (Im x y) = (a == x) && (b == y)
+	  (/=) (Im a b) (Im x y) = (a /= x) || (b /= y)
