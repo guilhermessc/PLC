@@ -1,17 +1,6 @@
 data Bt = SubT Int Bt Bt | Null
      deriving Show
 
-instance Num Bt where
-    fromInteger a = SubT (fromInteger a) (Null) (Null) 
-
-exemplo :: Bt
-exemplo = SubT 1 Null (SubT 5 Null (SubT 8 (SubT 6 Null Null) Null))
-
-
-mostra :: Bt -> String
-mostra (SubT a n m) = (mostra n) ++ (show a) ++ (show ' ') ++ (mostra m)
-mostra Null = (show '.')
-
 insert :: Bt -> Bt -> Bt
 insert a (Null) = a
 insert (Null) a = a
@@ -28,4 +17,8 @@ somaArv a = foldr (+) 0 (avrLista a)
 
 listArv :: [Int] -> Bt
 listArv [] = (Null)
-listArv (a:as) = insert (SubT a Null Null) (listArv as)
+listArv (a:as) = insert (listArv as) (SubT a Null Null)
+
+maiorAvr :: Bt -> Int
+maiorAvr (Null) = 0
+maiorAvr (SubT _ x y) = 1 + (max (maiorAvr x) (maiorAvr y))
