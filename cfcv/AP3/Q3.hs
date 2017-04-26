@@ -26,7 +26,9 @@ somaArv x = foldl (+) 0 (arvList x)
 
 -- Transforma uma lista em uma árvore
 listArv :: [Int] -> Arvbin
-listArv l = foldr (insertArvbin) NilT l    
+--listArv l = foldr (insertArvbin) NilT l
+listArv [] = NilT
+listArv (x:xs) = insertArvbin x (listArv xs)  
 
 -- Retorna o tamanho da árvore ,ou seja, o maior caminho da raiz até uma folha, por isso o uso da função max
 maiorArv :: Arvbin -> Int 

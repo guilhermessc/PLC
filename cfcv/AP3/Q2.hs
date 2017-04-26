@@ -50,7 +50,7 @@ instance OprDisjointSet LDisjointSet where
 -- Caso a e b não estejam presentes na lista ele retorna a estrutura sem alteração, caso contrário ele estrai as duas e concatena entre si e por fim concatena com a lista sem os dois conjuntos originais
     union a b (LDS l) = let r1 = (find a (LDS l)) 
                             r2 = (find b (LDS l))
-                        in if(r1 == Nothing || r2 == Nothing) then (LDS l) else (LDS ([(extract r1 l)++(extract r2 l)]++(delete r1 (delete r2 l))))
+                        in if(r1 == Nothing || r2 == Nothing || r2 == r1) then (LDS l) else (LDS ([(extract r1 l)++(extract r2 l)]++(delete r1 (delete r2 l))))
 
 -- Funções para TDS
 instance OprDisjointSet TDisjointSet where
