@@ -1,0 +1,18 @@
+import java.lang.String;
+
+public class Texto {
+	private int numero;
+	private String texto;
+	
+	public Texto(String txt) {
+		this.texto = "";
+		this.texto = texto + txt;
+		this.numero = getNumero();
+	}
+	
+	public int getNumero() {
+		String[] palavras = texto.split(" ");
+		this.numero = palavras.length;
+		return numero;
+	}
+}

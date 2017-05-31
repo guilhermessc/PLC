@@ -1,0 +1,12 @@
+import java.lang.*
+
+public class Texto {
+	private int numero;
+	private String texto;
+	
+	public static int getNumero() {
+		String frase = "era uma vez, um programador";
+		String[] palavras = frase.split(" ");
+		return palavras.length;	
+	}
+}
