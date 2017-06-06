@@ -1,0 +1,27 @@
+package lista5;
+
+public class Telefone {
+	private int DDD;
+	private int DDI;
+	private int telefone;
+	private tipo_telefonico tipo;
+	
+	void Telefone (int ddi, int ddd, int numero, tipo_telefonico tp) {
+		this.DDD = ddd;
+		this.DDI = ddi;
+		this.tipo = tp;
+		this.telefone = numero;
+	}
+	
+	void Telefone (int ddd, int numero, tipo_telefonico tp) {
+		this.Telefone(0, ddd, numero, tp);
+	}
+	
+	void Telefone (int numero, tipo_telefonico tp) {
+		this.Telefone(0, 0, numero, tp);
+	}
+	
+	void Telefone (int numero) {
+		this.Telefone(0, 0, numero, tipo_telefonico.celular);
+	}
+}

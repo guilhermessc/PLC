@@ -1,0 +1,12 @@
+package lista5;
+
+public class ContatoSmartphone implements Contato{
+	private String nome;
+	private String email;
+	private Telefone tel[];
+
+	public ContatoSmartphone () {
+		
+	}	
+	
+}

@@ -1,0 +1,12 @@
+package lista5;
+
+public class ContatoSmartphone implements Contato{
+	private String nome;
+	private String email;
+	private Telefone tel[]; // limite 4 com tipos distintos
+
+	public ContatoSmartphone (String nome, String email, Telefone telefone) {
+		
+	}	
+	
+}

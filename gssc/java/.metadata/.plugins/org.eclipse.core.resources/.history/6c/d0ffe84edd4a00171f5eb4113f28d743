@@ -1,0 +1,22 @@
+package lista5;
+
+public class MainClass {
+	public static void main (String[] args) {
+		Telefone fone = new Telefone (12345678, tipo_telefonico.fax);
+		Telefone fone2 = new Telefone (12345678, tipo_telefonico.fax);
+		Telefone fone3 = new Telefone (11111111, tipo_telefonico.fax);
+		System.out.println(fone.getDDI());
+		System.out.println(fone.getDDD());
+		System.out.println(fone.getTelefone());
+		System.out.println(fone.getTipo());
+		
+		System.out.println(fone);
+		System.out.println(fone2);
+		System.out.println(fone.equals(fone2));
+		
+		System.out.println(fone3); // uso implicito do toString();
+		System.out.println(fone2.equals(fone3));
+		
+		
+	}
+}

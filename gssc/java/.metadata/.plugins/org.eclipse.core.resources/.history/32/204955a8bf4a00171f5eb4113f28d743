@@ -1,0 +1,8 @@
+package lista5;
+
+public class MainClass {
+	public static void main (String[] args) {
+		Telefone fone = new Telefone (12345678, tipo_telefonico.fax);
+		
+	}
+}

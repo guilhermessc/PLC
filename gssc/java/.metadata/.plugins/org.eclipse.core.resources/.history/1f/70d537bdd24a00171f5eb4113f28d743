@@ -1,0 +1,29 @@
+package lista5;
+
+public class ContatoCelular {
+	
+	private String nome;
+	private Telefone telefone;
+	
+	public ContatoCelular (String name, Telefone tel) {
+		this.nome = name;
+		this.telefone = tel;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public Telefone getTelefone() {
+		return telefone;
+	}
+
+	public void setTelefone(Telefone telefone) {
+		this.telefone = telefone;
+	}
+	
+}

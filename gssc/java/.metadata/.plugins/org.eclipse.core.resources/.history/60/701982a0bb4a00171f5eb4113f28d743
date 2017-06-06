@@ -1,0 +1,5 @@
+package lista5;
+
+public enum tipo_telefonico {
+
+}
