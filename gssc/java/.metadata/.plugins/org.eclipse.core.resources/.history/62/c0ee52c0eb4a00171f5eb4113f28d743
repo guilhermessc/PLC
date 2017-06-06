@@ -2,13 +2,6 @@ package lista5;
 
 public class MainClass {
 	
-	public static void print_strings (String[] strs) {		
-		for (int i=0; i<strs.length; ++i) {
-			System.out.print(strs[i] + " ");
-		}
-		System.out.println();
-	}
-	
 	public static void main (String[] args) {
 		Telefone fone = new Telefone (12345678, tipo_telefonico.fax);
 		Telefone fone2 = new Telefone (12345678, tipo_telefonico.fax);
@@ -27,27 +20,24 @@ public class MainClass {
 	
 		ContatoSmartphone cs;
 		ContatoSmartphone cs2;
-		ContatoCelular cc;
-		ContatoCelular cc2;
-		
 		Telefone telefones[] = {new Telefone(12345678, tipo_telefonico.celular), fone};
 		cs = new ContatoSmartphone("Joao", "j@a.com", telefones);
 		cs2 = new ContatoSmartphone("Maria", "m@a.com", telefones);
-		cc = new ContatoCelular ("Ana", fone2);
-		cc2 = new ContatoCelular ("Bob", fone3);
 		
 		if (cs instanceof ContatoSmartphone){
 			System.out.println(cs.obterTelefone());
 		}
 	
-		Contato[] contatos = new Contato[4];
-		contatos[0] = cs;
-		contatos[1] = cs2;
-		contatos[2] = cc;
-		contatos[3] = cc2;
+		Contato[] contatosS = new Contato[2];
+		contatosS[0] = cs;
+		contatosS[1] = cs2;
+		String all_contacts = new String();
 		
-		print_strings(AgendaContatos.obterNomes(contatos));
-		print_strings(AgendaContatos.obterNomes(AgendaContatos.obterContatosCelular(contatos)));
-		print_strings(AgendaContatos.obterNomes(AgendaContatos.obterContatosSmartphone(contatos)));
+		all_contacts = "";
+		for (int i=0; i<AgendaContatos.obterNomes(contatosS).length; ++i) {
+			all_contacts = all_contacts + AgendaContatos.obterNomes(contatosS)[i] + " ";
+		}
+		
+		System.out.println(all_contacts);
 	}
 }

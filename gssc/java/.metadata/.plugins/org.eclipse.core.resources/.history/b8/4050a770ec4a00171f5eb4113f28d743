@@ -30,24 +30,21 @@ public class MainClass {
 		ContatoCelular cc;
 		ContatoCelular cc2;
 		
-		Telefone telefones[] = {new Telefone(12345678, tipo_telefonico.celular), fone};
+		Telefone telefones[] = {new Telefone(12345678, tipo_telefonico.fax), fone};
 		cs = new ContatoSmartphone("Joao", "j@a.com", telefones);
 		cs2 = new ContatoSmartphone("Maria", "m@a.com", telefones);
 		cc = new ContatoCelular ("Ana", fone2);
-		cc2 = new ContatoCelular ("Bob", fone3);
+		
 		
 		if (cs instanceof ContatoSmartphone){
 			System.out.println(cs.obterTelefone());
 		}
 	
-		Contato[] contatos = new Contato[4];
-		contatos[0] = cs;
-		contatos[1] = cs2;
-		contatos[2] = cc;
-		contatos[3] = cc2;
+		Contato[] contatosS = new Contato[2];
+		contatosS[0] = cs;
+		contatosS[1] = cs2;
 		
-		print_strings(AgendaContatos.obterNomes(contatos));
-		print_strings(AgendaContatos.obterNomes(AgendaContatos.obterContatosCelular(contatos)));
-		print_strings(AgendaContatos.obterNomes(AgendaContatos.obterContatosSmartphone(contatos)));
+		print_strings(AgendaContatos.obterNomes(contatosS));
+		
 	}
 }

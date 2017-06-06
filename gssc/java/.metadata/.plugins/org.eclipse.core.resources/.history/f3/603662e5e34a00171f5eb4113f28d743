@@ -3,9 +3,9 @@ package lista5;
 public class ContatoSmartphone implements Contato{
 	private String nome;
 	private String email;
-	private Telefone[] tel; // limite 4 com tipos distintos
+	private Telefone tel[]; // limite 4 com tipos distintos
 
-	public ContatoSmartphone (String nome, String email, Telefone[] telefone) {
+	public ContatoSmartphone (String nome, String email, Telefone telefone[]) {
 
 		boolean is_cel = false;
 		
@@ -17,7 +17,7 @@ public class ContatoSmartphone implements Contato{
 				is_cel = true;
 			}
 		}
-		if (is_cel == false)
+		if (is_cel)
 			throw new IllegalArgumentException ("Must have a number type 'celular'");
 		
 		for (int i=0; i < telefone.length; ++i)
@@ -31,6 +31,9 @@ public class ContatoSmartphone implements Contato{
 		
 	}	
 	
+	public String obterNome (){
+		return this.nome;
+	}
 	public Telefone obterTelefone(){
 		
 		for (int i=0; i<this.tel.length; ++i) {
@@ -38,29 +41,6 @@ public class ContatoSmartphone implements Contato{
 				return this.tel[i];
 		}
 		return this.tel[0];
-	}
-	public String obterNome() {
-		return nome;
-	}
-
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
-
-	public String getEmail() {
-		return email;
-	}
-
-	public void setEmail(String email) {
-		this.email = email;
-	}
-
-	public Telefone[] getTel() {
-		return tel;
-	}
-
-	public void setTel(Telefone[] tel) {
-		this.tel = tel;
 	}
 	
 	

@@ -47,7 +47,8 @@ public class MainClass {
 		contatos[3] = cc2;
 		
 		print_strings(AgendaContatos.obterNomes(contatos));
-		print_strings(AgendaContatos.obterNomes(AgendaContatos.obterContatosCelular(contatos)));
-		print_strings(AgendaContatos.obterNomes(AgendaContatos.obterContatosSmartphone(contatos)));
+		print_strings(AgendaContatos.obterNomes(contatos));
+		print_strings(AgendaContatos.obterNomes(contatos));
+		
 	}
 }

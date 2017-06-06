@@ -40,14 +40,13 @@ public class MainClass {
 			System.out.println(cs.obterTelefone());
 		}
 	
-		Contato[] contatos = new Contato[4];
-		contatos[0] = cs;
-		contatos[1] = cs2;
-		contatos[2] = cc;
-		contatos[3] = cc2;
+		Contato[] contatosS = new Contato[4];
+		contatosS[0] = cs;
+		contatosS[1] = cs2;
+		contatosS[2] = cc;
+		contatosS[3] = cc2;
 		
-		print_strings(AgendaContatos.obterNomes(contatos));
-		print_strings(AgendaContatos.obterNomes(AgendaContatos.obterContatosCelular(contatos)));
-		print_strings(AgendaContatos.obterNomes(AgendaContatos.obterContatosSmartphone(contatos)));
+		print_strings(AgendaContatos.obterNomes(contatosS));
+		
 	}
 }
