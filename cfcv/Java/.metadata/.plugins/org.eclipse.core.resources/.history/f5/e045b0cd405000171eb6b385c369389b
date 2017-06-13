@@ -1,0 +1,19 @@
+
+public class Conta {
+	int saldo;
+	public Conta(){
+		this.saldo = 0;
+	}
+	
+	public void deposita(int v){
+		this.saldo += v;
+	}
+	public void saca(int v) throws ContaException{
+		if(v > this.saldo){
+			throw new ContaException();
+		}
+		else{
+			this.saldo -= v;
+		}
+	}
+}

@@ -1,0 +1,35 @@
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+public class Questao2 {
+	public static void main(String[] args){
+		Scanner teclado = new Scanner(System.in);
+		int x = 0, y = 0, r = 0;
+		
+		System.out.println("eu sei dividir");
+		System.out.print("informe o primeiro valor: ");
+		try{
+			x = teclado.nextInt();
+		}
+		catch(InputMismatchException e){
+			 e.printStackTrace();
+		}
+		
+		
+		System.out.print("informe o segundo valor: ");
+		try{
+			y = teclado.nextInt();
+		}
+		catch(InputMismatchException e){
+			e.printStackTrace();
+		}
+		
+		//try{
+			//r = (x/y);
+		//}
+		//catch()
+		
+		System.out.println("o resultado da soma é: "+r);
+		teclado.close();
+	}
+}

@@ -1,0 +1,8 @@
+
+public class ContaException extends Exception{
+	public int saldo_recuperado;
+	public ContaException(int rec){
+		this.saldo_recuperado = rec;
+		super("Saldo insuficiente");
+	}
+}
