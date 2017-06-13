@@ -1,9 +1,0 @@
-package lista5;
-
-public class Telefone {
-	private int DDD;
-	private int DDI;
-	private int telefone;
-	
-	
-}

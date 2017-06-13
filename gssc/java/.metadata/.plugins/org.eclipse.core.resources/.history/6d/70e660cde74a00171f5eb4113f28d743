@@ -1,7 +1,0 @@
-package lista5;
-
-public abstract class AgendaContatos {
-	public static String[] obterNomes (Contato[] contatos) {
-		
-	}
-}

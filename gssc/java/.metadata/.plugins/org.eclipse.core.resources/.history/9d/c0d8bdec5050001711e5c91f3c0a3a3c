@@ -1,0 +1,57 @@
+package lista_6;
+import java.util.InputMismatchException;
+import java.util.NoSuchElementException;
+import java.util.Scanner;
+
+public class Questao2 {
+	
+	public static void main(String[] args) {
+
+		System.out.println("Eu sei dividir");
+		System.out.println("Informe o primeiro valor");
+		int x = Questao2.readInt();
+		System.out.println("Informe o segundo valor");
+		int y = Questao2.readInt();
+		double r = 0;
+		try {
+			r = (x / y);
+		}
+		catch (ArithmeticException ae) {
+			ae.printStackTrace();
+		}
+		System.out.println("O resultado da divisao: " + r);
+	}
+	
+	public static int readInt () {
+		int x=0;
+		boolean exc = false;
+		
+		String aux = new String("");
+		Scanner teclado = new Scanner(System.in);
+		try {
+			System.out.println("go...");
+			while (!teclado.hasNextInt()) {
+				aux = teclado.next();
+			}
+			x = Integer.decode(aux);
+//			System.out.println("now...");
+//			x = teclado.nextInt();
+		}
+		catch (InputMismatchException ime) {
+			ime.printStackTrace();
+			exc = true;
+		} 
+		catch (NoSuchElementException nsee) {
+			nsee.printStackTrace();
+			exc = true;
+		}
+		finally {
+			teclado.close();
+			System.out.println("closing teclado...");
+		}
+		
+		if (exc)
+			return Questao2.readInt();
+		return x;
+	}
+}

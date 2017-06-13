@@ -1,0 +1,7 @@
+package lista_6;
+
+public class ContaException extends Exception {
+	public ContaException () {
+		super("Saldo insuficiente");
+	}
+}

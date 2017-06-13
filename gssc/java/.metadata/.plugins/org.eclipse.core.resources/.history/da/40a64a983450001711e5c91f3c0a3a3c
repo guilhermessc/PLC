@@ -1,0 +1,16 @@
+package lista_6;
+import java.util.Scanner;
+
+public class Main {
+	private String CPF;
+	
+	public Main () {
+		CPF = new String("");
+	}
+	
+	public void obterCPF () throws CPFInvalidoException {
+		Scanner input = new Scanner(System.in);
+		this.CPF = input.next();
+		System.out.println(this.CPF);
+	}
+}

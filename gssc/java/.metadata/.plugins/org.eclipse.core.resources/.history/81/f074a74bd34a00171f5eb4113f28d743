@@ -1,6 +1,0 @@
-package lista5;
-
-public interface Contato {
-	String obterNome ();
-	Telefone obterTelefone();
-}

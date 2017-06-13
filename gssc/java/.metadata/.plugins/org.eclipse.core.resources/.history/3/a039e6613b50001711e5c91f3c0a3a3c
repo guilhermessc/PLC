@@ -1,0 +1,20 @@
+package lista_6;
+
+public class TesteException {
+	public static void main (String[] args) {
+		System.out.println("Inicio da main");
+		metodo1();
+		System.out.println("fim do main");
+	}
+  
+	static void metodo1() {
+	  	System.out.println("Inicio do metodo1");
+	    metodo2();
+	    System.out.println("fim do metodo1");
+	}
+  
+	static void metodo2() {
+		System.out.println("Inicio da main");
+		System.out.println("Inicio da main");
+	}
+}

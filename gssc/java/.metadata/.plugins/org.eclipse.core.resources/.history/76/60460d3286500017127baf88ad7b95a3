@@ -1,0 +1,28 @@
+package lista_6;
+
+public class Conta {
+	private double saldo;
+	private double limite;
+	
+	public Conta () {
+		this.saldo = 0;
+		this.limite = -1;
+	}
+	
+	public double getSaldo() {
+		return saldo;
+	}
+
+	public void deposita(double saldo) {
+		this.saldo += saldo;
+	}
+	
+	public void setLimite(double limite) {
+		this.limite = limite;
+	}
+	
+	public void saca (double saldo) {
+		this.saldo -= saldo;
+	}
+	
+}
